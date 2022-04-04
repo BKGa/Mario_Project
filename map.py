@@ -49,7 +49,7 @@ class Map():
                 if letter == 'L':
                     Map.create_brick(self, x*40, y*40, 0)
                 if letter == 'X':
-                    Map.create_brick(self, x*40, y*40, 0)
+                    Map.create_brick(self, x*40, y*40, 4)
 
     def create_brick(self, x, y, num):
         self.brick = Brick(self.screen, self.settings, num)
