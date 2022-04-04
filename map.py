@@ -1,5 +1,6 @@
 from vector import Vector
 from settings import Settings
+from brick import Brick
 
 class Map():
     def __init__(self, screen, settings, bricks, pipes, mario, enemies, ground, upgrades, stats, secret_bricks):
