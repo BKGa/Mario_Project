@@ -24,7 +24,9 @@ def Game():
     power_ups = Group()
     bricks = Group()
     secret_bricks = Group()
-    mario = Mario(screen, settings, pipes, bricks, stats, enemies, fireballs, secret_bricks, ground) #Missing a lot of arguments, add when completed
+    secret_pipes = Group()
+    poles = Group()
+    mario = Mario(screen, settings, pipes, bricks, stats, enemies, poles, fireballs, secret_bricks, ground, secret_pipes) #Missing a lot of arguments, add when completed
 
     if stats.game_active:
         game_f.check_events(mario, stats, fireballs)
