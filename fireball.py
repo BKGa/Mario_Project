@@ -3,10 +3,10 @@ from vector import Vector
 from pygame.sprite import Sprite, Group
 from copy import copy
 from random import randint
-from sound import Sound
-import alien as alien
-from game_stats import Stats
-import barrier
+from sounds import Sound
+from goomba import Goomba
+from koopa import Koopa
+
 
 
 class Fireballs:
@@ -15,7 +15,7 @@ class Fireballs:
         self.stats = game.stats
         self.sound = game.sound
         self.owner = owner
-        self.alien_fleet = game.alien_fleet
+        self.enemy = Goomba, Koopa #Unsure with this code just yet
         self.fireballs = Group()
 
     def add(self, fireball):
@@ -28,7 +28,7 @@ class Fireballs:
         new_laser = Fireball(self.game)
         self.fireballs.add(new_laser)
         snd = self.sound
-        snd.play_fire_phaser() if type(self.owner) is alien.AlienFleet else snd.play_fire_photon()
+        #snd.play_fire_phaser() if type(self.owner) is alien.AlienFleet else snd.play_fire_photon()
 
     def update(self):
         for fireball in self.fireballs.copy():
