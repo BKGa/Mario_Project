@@ -4,6 +4,8 @@ from mario import Mario
 from settings import Settings
 from map import Map
 import sounds
+import goomba
+import koopa
 import game_functions as game_f
 from stats import Stats
 from mario import Mario
