@@ -1,5 +1,7 @@
 from vector import Vector
 from settings import Settings
+from goomba import Goomba
+from koopa import Koopa
 from brick import Brick
 
 class Map():
@@ -16,12 +18,15 @@ class Map():
         self.upgrades = upgrades
         self.enemies = enemies
         self.ground = ground
+        with open(self.level, 'r') as f:
+            self.rows = f.readlines()
 
 
 
     def set_map(self): # Unsure how to read each letter accurately from a text file in a row/column format
-        for y in range(0, self.level.size[1]):
-            for x in range(0, self.level.size[0]):
+        for y in range(len(self.rows)):
+            row = self.rows(y)
+            for x in range(len(row)):
                 letter = self.level((x, y))
 
                 if letter == 'B':

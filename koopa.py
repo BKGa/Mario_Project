@@ -19,6 +19,7 @@ class Koopa(Sprite):
         self.x = self.rect.x
         self.y = self.rect.y
         self.facing_left = True
+        sheet = pg.image.load('images/allsprites.png')
 
     def update(self, mario):
         if self.shell:

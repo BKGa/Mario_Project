@@ -1,7 +1,7 @@
 import pygame as pg
 from pygame.sprite import Sprite
 
-class Koopa(Sprite):
+class Goomba(Sprite):
     def __init__(self, screen, settings, pipes, blocks, enemies, mario):
         super(Koopa, self).__init__()
         self.screen = screen
@@ -17,6 +17,7 @@ class Koopa(Sprite):
         self.x = self.rect.x
         self.y = self.rect.y
         self.facing_left = True
+        sheet = pg.image.load('images/allsprites.png')
 
     def update(self, mario):
         pass
